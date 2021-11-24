@@ -1,0 +1,300 @@
+<script>
+
+    var jugador1 = prompt("INGRESE EL NOMBRE DEL 1 JUGADOR");
+
+    var Fila1 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila2 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila3 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila4 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila5 = ["|", " ", " ", " ", " ", " ", "|"];
+
+    var barco1 = parseInt(prompt("LAS DIMENSIONES DEL TABLERO SON DE 5 x 5\n" + "INGRESE LA FILA DEL 1 BARCO DEl 1 AL 5"));
+    var barco11 = parseInt(prompt("INGRESE LA COLUMNA DEL 1 BARCO DEl 1 AL 5"));
+    switch (barco1) {
+        case 1:
+            Fila1.splice(barco11, 1, "O");
+            break;
+        case 2:
+            Fila2.splice(barco11, 1, "O");
+            break;
+        case 3:
+            Fila3.splice(barco11, 1, "O");
+            break;
+        case 4:
+            Fila4.splice(barco11, 1, "O");
+            break;
+        case 5:
+            Fila5.splice(barco11, 1, "O");
+            break;
+    }
+    var barco2 = parseInt(prompt("INGRESE LA FILA DEL 2 BARCO DEl 1 AL 5"));
+    var barco22 = parseInt(prompt("INGRESE LA COLUMNA DEL 2 BARCO DEl 1 AL 5"));
+    switch (barco2) {
+        case 1:
+            Fila1.splice(barco22, 1, "O");
+            break;
+        case 2:
+            Fila2.splice(barco22, 1, "O");
+            break;
+        case 3:
+            Fila3.splice(barco22, 1, "O");
+            break;
+        case 4:
+            Fila4.splice(barco22, 1, "O");
+            break;
+        case 5:
+            Fila5.splice(barco22, 1, "O");
+            break;
+    }
+    var barco3 = parseInt(prompt("INGRESE LA FILA DEL 3 BARCO DEl 1 AL 5"));
+    var barco33 = parseInt(prompt("INGRESE LA COLUMNA DEL 3 BARCO DEl 1 AL 5"));
+    switch (barco3) {
+        case 1:
+            Fila1.splice(barco33, 1, "O");
+            break;
+        case 2:
+            Fila2.splice(barco33, 1, "O");
+            break;
+        case 3:
+            Fila3.splice(barco33, 1, "O");
+            break;
+        case 4:
+            Fila4.splice(barco33, 1, "O");
+            break;
+        case 5:
+            Fila5.splice(barco33, 1, "O");
+            break;
+    }
+    var jugador2 = prompt("INGRESE EL NOMBRE DEL 2 JUGADOR");
+
+    var Fila6 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila7 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila8 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila9 = ["|", " ", " ", " ", " ", " ", "|"];
+    var Fila10 = ["|", " ", " ", " ", " ", " ", "|"];
+
+    var barco4 = parseInt(prompt("LAS DIMENSIONES DEL TABLERO SON DE 5 x 5\n" + "INGRESE LA FILA DEL 1 BARCO DEl 1 AL 5"));
+    var barco44 = parseInt(prompt("INGRESE LA COLUMNA DEL 1 BARCO DEl 1 AL 5"));
+    switch (barco4) {
+        case 1:
+            Fila6.splice(barco44, 1, "O");
+            break;
+        case 2:
+            Fila7.splice(barco44, 1, "O");
+            break;
+        case 3:
+            Fila8.splice(barco44, 1, "O");
+            break;
+        case 4:
+            Fila9.splice(barco44, 1, "O");
+            break;
+        case 5:
+            Fila10.splice(barco44, 1, "O");
+            break;
+    }
+    var barco5 = parseInt(prompt("INGRESE LA FILA DEL 2 BARCO DEl 1 AL 5"));
+    var barco55 = parseInt(prompt("INGRESE LA COLUMNA DEL 2 BARCO DEl 1 AL 5"));
+    switch (barco5) {
+        case 1:
+            Fila6.splice(barco55, 1, "O");
+            break;
+        case 2:
+            Fila7.splice(barco55, 1, "O");
+            break;
+        case 3:
+            Fila8.splice(barco55, 1, "O");
+            break;
+        case 4:
+            Fila9.splice(barco55, 1, "O");
+            break;
+        case 5:
+            Fila10.splice(barco55, 1, "O");
+            break;
+    }
+    var barco6 = parseInt(prompt("INGRESE LA FILA DEL 3 BARCO DEl 1 AL 5"));
+    var barco66 = parseInt(prompt("INGRESE LA COLUMNA DEL 3 BARCO DEl 1 AL 5"));
+    switch (barco6) {
+        case 1:
+            Fila6.splice(barco66, 1, "O");
+            break;
+        case 2:
+            Fila7.splice(barco66, 1, "O");
+            break;
+        case 3:
+            Fila8.splice(barco66, 1, "O");
+            break;
+        case 4:
+            Fila9.splice(barco66, 1, "O");
+            break;
+        case 5:
+            Fila10.splice(barco66, 1, "O");
+            break;
+    }
+
+    for (i = 0; i < 25; i++) {
+        var disparo = parseInt(prompt(jugador1 + " " + "INGRESE LA FILA PARA ATACAR DEL 1 AL 5"));
+        var disparo2 = parseInt(prompt(jugador1 + " " + "INGRESE LA COLUMNA PARA ATACAR DEL 1 AL 5"));
+        switch (disparo) {
+            case 1:
+                if (Fila6[disparo2] == "O") {
+                    Fila6.splice(disparo2, 1, "X");
+                    console.log(jugador1 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila6.splice(disparo2, 1, "/");
+                    console.log(jugador1 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 2:
+                if (Fila7[disparo2] == "O") {
+                    Fila7.splice(disparo2, 1, "X");
+                    console.log(jugador1 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila7.splice(disparo2, 1, "/");
+                    console.log(jugador1 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 3:
+                if (Fila8[disparo2] == "O") {
+                    Fila8.splice(disparo2, 1, "X");
+                    console.log(jugador1 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila8.splice(disparo2, 1, "/");
+                    console.log(jugador1 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 4:
+                if (Fila9[disparo2] == "O") {
+                    Fila9.splice(disparo2, 1, "X");
+                    console.log(jugador1 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila9.splice(disparo2, 1, "/");
+                    console.log(jugador1 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 5:
+                if (Fila10[disparo2] == "O") {
+                    Fila10.splice(disparo2, 1, "X");
+                    console.log(jugador1 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila10.splice(disparo2, 1, "/");
+                    console.log(jugador1 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            
+        }
+        var disparo3 = parseInt(prompt(jugador2 + " " + "INGRESE LA FILA PARA ATACAR DEL 1 AL 5"));
+        var disparo4 = parseInt(prompt(jugador2 + " " + "INGRESE LA COLUMNA PARA ATACAR DEL 1 AL 5"));
+        switch (disparo3) {
+            case 1:
+                if (Fila1[disparo4] == "O") {
+                    Fila1.splice(disparo4, 1, "X");
+                    console.log(jugador2 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila1.splice(disparo4, 1, "/");
+                    console.log(jugador2 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 2:
+                if (Fila2[disparo4] == "O") {
+                    Fila2.splice(disparo4, 1, "X");
+                    console.log(jugador2 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila2.splice(disparo4, 1, "/");
+                    console.log(jugador2 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 3:
+                if (Fila3[disparo4] == "O") {
+                    Fila3.splice(disparo4, 1, "X");
+                    console.log(jugador2 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila3.splice(disparo4, 1, "/");
+                    console.log(jugador2 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 4:
+                if (Fila4[disparo4] == "O") {
+                    Fila4.splice(disparo4, 1, "X");
+                    console.log(jugador2 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila4.splice(disparo4, 1, "/");
+                    console.log(jugador2 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+            case 5:
+                if (Fila5[disparo4] == "O") {
+                    Fila5.splice(disparo4, 1, "X");
+                    console.log(jugador2 + " " + "HAS DERRIBADO UN BARCO");
+                } else {
+                    Fila10.splice(disparo4, 1, "/");
+                    console.log(jugador2 + " " + "HAS FALLADO EL DISPARO");
+                }
+                break;
+           
+        }
+        var Y = verificar(Fila1, Fila2, Fila3, Fila4, Fila5, Fila6, Fila7, Fila8, Fila9, Fila10);
+        if (Y == "no") {
+            break;
+        }
+    }
+    var X = ganador(Fila1, Fila2, Fila3, Fila4, Fila5, Fila6, Fila7, Fila8, Fila9, Fila10);
+    if (X == "si") {
+        console.log("TABLERO DE " + jugador1);
+        console.log(Fila1);
+        console.log(Fila2);
+        console.log(Fila3);
+        console.log(Fila4);
+        console.log(Fila5);
+        console.log("TABLERO DE " + jugador2);
+        console.log(Fila6);
+        console.log(Fila7);
+        console.log(Fila8);
+        console.log(Fila9);
+        console.log(Fila10);
+        console.log(jugador1 +" " + "FELICIDADES ERES EL GANADOR");
+    } else {
+        console.log("TABLERO DE " + jugador1);
+        console.log(Fila1);
+        console.log(Fila2);
+        console.log(Fila3);
+        console.log(Fila4);
+        console.log(Fila5);
+        console.log("TABLERO DE " + jugador2);
+        console.log(Fila6);
+        console.log(Fila7);
+        console.log(Fila8);
+        console.log(Fila9);
+        console.log(Fila10);
+        console.log(jugador2 + " " + "FELICIDADES ERES EL GANADOR");
+    }
+
+    function verificar(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10) {
+        let x = "";
+        let y = "";
+        let z = "no";
+        for (l = 1; l < f1.length; l++) {
+            if (f1[l] == "O" || f2[l] == "O" || f3[l] == "O" || f4[l] == "O" || f5[l] == "O") {
+                x = "si";
+            }
+            if (f6[l] == "O" || f7[l] == "O" || f8[l] == "O" || f9[l] == "O" || f10[l] == "O") {
+                y = "si";
+            }
+        }
+        if (x == "si" && y == "si") {
+            return x;
+        } else {
+            return z;
+        }
+    }
+    function ganador(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10) {
+        let x = "si";
+        let y = "no";
+        for (l = 1; l < f1.length; l++) {
+            if (f1[l] == "O" || f2[l] == "O" || f3[l] == "O" || f4[l] == "O" || f5[l] == "O") {
+                return x;
+            }
+            return y;
+        }
+    }
+
+</script>
